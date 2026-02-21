@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container">
           <h1>Build an apartment building in Amsterdam with us</h1>
           <p>We're a collective of property owners and designers forming a CPO. Join to co-create a sustainable, community-led building.</p>
-          <Link href="#contact"><a className="cta">Join / Contact</a></Link>
+          <Link href="#contact" className="cta">Join / Contact</Link>
         </div>
       </header>
 
