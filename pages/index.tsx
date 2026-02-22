@@ -43,7 +43,7 @@ export default function Home() {
           <div style={{border:'1px solid #ddd',borderRadius:8,overflow:'hidden'}}>
             <iframe
               title="Project location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=4.985139%2C52.333472%2C5.045139%2C52.373472&layer=mapnik&marker=52.353472%2C5.015139"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=4.985139%2C52.333472%2C5.045139%2C52.373472&layer=mapnik&marker=52.353472%2C5.015139&zoom=14"
               style={{width:'100%',height:360,border:0}}
             />
           </div>
