@@ -33,8 +33,8 @@ export default function Home() {
           <h2>Location</h2>
           <div style={{border:'1px solid #ddd',borderRadius:8,overflow:'hidden'}}>
             <iframe
-              title="Amsterdam location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=4.859%2C52.346%2C4.955%2C52.389&layer=mapnik&marker=52.370216%2C4.895168"
+              title="Project location"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=4.985139%2C52.333472%2C5.045139%2C52.373472&layer=mapnik&marker=52.353472%2C5.015139"
               style={{width:'100%',height:360,border:0}}
             />
           </div>
