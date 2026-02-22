@@ -12,9 +12,38 @@ export default function Home() {
 
       <header className="hero">
         <div className="container">
-          <h1>Build an apartment building in Amsterdam with us</h1>
-          <p>We're a collective of property owners and designers forming a CPO. Join to co-create a sustainable, community-led building.</p>
-          <Link href="#contact" className="cta">Join / Contact</Link>
+          <div className="hero-inner">
+            <div className="hero-content">
+              <h1>Build Your Own Apartment in Amsterdam — Together.</h1>
+              <p className="lead">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
+              <Link href="#contact" className="cta">Join the CPO Interest List</Link>
+            </div>
+
+            <div className="hero-visual" role="img" aria-label="Illustration of apartments and community">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0%" stopColor="#c7f9cc" />
+                    <stop offset="100%" stopColor="#8bd3a6" />
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#g1)" rx="12" />
+                <g fill="#fff" opacity="0.95">
+                  <rect x="50" y="150" width="80" height="180" rx="6" />
+                  <rect x="150" y="110" width="90" height="220" rx="6" />
+                  <rect x="260" y="140" width="70" height="190" rx="6" />
+                  <rect x="350" y="90" width="120" height="240" rx="6" />
+                  <rect x="490" y="170" width="60" height="160" rx="6" />
+                </g>
+                <g fill="rgba(0,0,0,0.06)">
+                  <rect x="70" y="170" width="16" height="20" rx="2" />
+                  <rect x="190" y="130" width="16" height="20" rx="2" />
+                  <rect x="280" y="160" width="10" height="18" rx="2" />
+                  <rect x="380" y="110" width="18" height="24" rx="2" />
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
       </header>
 
