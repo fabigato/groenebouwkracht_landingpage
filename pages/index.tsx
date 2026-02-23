@@ -13,11 +13,11 @@ export default function Home() {
 
       <header className="bg-white py-16 border-b border-gray-200">
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
-          <div className="flex flex-col md:flex-row gap-8 md:items-center">
+          <div className="flex flex-col md:flex-row gap-6 md:items-start">
             <div className="md:flex-1">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
-              <p className="text-gray-600 text-lg mb-4">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-accent text-white px-6 py-3 rounded-lg font-semibold shadow-sm hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent/50 transition">Join the CPO Interest List</Link>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <p className="text-slate-500 text-base mb-4">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
+              <Link href="#contact" className="inline-block bg-accent text-white px-4 py-2 rounded">Join the CPO Interest List</Link>
             </div>
 
             <div className="md:flex-1 flex justify-center items-center">
