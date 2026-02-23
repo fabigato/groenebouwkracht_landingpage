@@ -15,9 +15,9 @@ export default function Home() {
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
           <div className="flex flex-col md:flex-row gap-8 md:items-center">
             <div className="md:flex-1">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-gray-600 text-lg mb-4">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md">Join the CPO Interest List</Link>
+              <Link href="#contact" className="inline-block bg-accent text-white px-6 py-3 rounded-lg font-semibold shadow-sm hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent/50 transition">Join the CPO Interest List</Link>
             </div>
 
             <div className="md:flex-1 flex justify-center items-center">
