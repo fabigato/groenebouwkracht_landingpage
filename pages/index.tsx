@@ -24,7 +24,7 @@ export default function Home() {
             </div>
 
             <div className="flex-1 flex justify-center items-center">
-              <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-xl object-cover max-w-[560px]" />
+                <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-[12px] object-cover max-w-[560px]" />
             </div>
           </div>
         </div>
