@@ -14,8 +14,8 @@ export default function Home() {
 
       <header className="bg-white py-16 border-b border-gray-200">
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
-          <div className="flex flex-col md:flex-row gap-6 md:items-start">
-            <div className="md:flex-1">
+          <div className="flex flex-row gap-6 items-start">
+            <div className="flex-1">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-manrope leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-slate-500 text-base mb-4 font-grotesk">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
               <Link href="#contact">
@@ -23,7 +23,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="md:flex-1 flex justify-center items-center">
+            <div className="flex-1 flex justify-center items-center">
               <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-xl object-cover max-w-[560px]" />
             </div>
           </div>
