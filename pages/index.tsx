@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="Join our CPO to build an apartment building in Amsterdam" />
       </Head>
 
-      <header className="bg-white py-16 border-b border-gray-200">
+      <header className="bg-white py-16">
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
           <div className="flex flex-row gap-6 items-start">
             <div className="flex-1">
