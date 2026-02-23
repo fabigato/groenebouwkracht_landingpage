@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../src/components/ContactForm'
+import { Button } from '../src/components/ui/button'
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
             <div className="md:flex-1">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-manrope leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-slate-500 text-base mb-4 font-grotesk">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-accent text-white px-4 py-2 rounded font-grotesk">Join the CPO Interest List</Link>
+              <Link href="#contact">
+                <Button className="font-grotesk">Join the CPO Interest List</Button>
+              </Link>
             </div>
 
             <div className="md:flex-1 flex justify-center items-center">

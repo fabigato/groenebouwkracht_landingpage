@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { Button } from './ui/button'
+import { Input } from './ui/input'
+import { Textarea } from './ui/textarea'
 
 export default function ContactForm() {
   const [name, setName] = useState('')
@@ -28,44 +31,40 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <label className="block">
-        <span className="font-medium font-grotesk">Name</span>
-        <input
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
+      <div>
+        <label className="block text-sm font-medium font-manrope mb-1">Name</label>
+        <Input
           value={name}
           onChange={e => setName(e.target.value)}
           required
+          placeholder="Your name"
         />
-      </label>
+      </div>
 
-      <label className="block">
-        <span className="font-medium font-grotesk">Email</span>
-        <input
+      <div>
+        <label className="block text-sm font-medium font-manrope mb-1">Email</label>
+        <Input
           type="email"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
           value={email}
           onChange={e => setEmail(e.target.value)}
           required
+          placeholder="your.email@example.com"
         />
-      </label>
+      </div>
 
-      <label className="block">
-        <span className="font-medium font-grotesk">Message</span>
-        <textarea
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200 h-32"
+      <div>
+        <label className="block text-sm font-medium font-manrope mb-1">Message</label>
+        <Textarea
           value={message}
           onChange={e => setMessage(e.target.value)}
           required
+          placeholder="Your message"
         />
-      </label>
+      </div>
 
-      <button
-        type="submit"
-        disabled={status === 'sending'}
-        className="bg-accent text-white px-4 py-2 rounded disabled:opacity-50 font-grotesk"
-      >
+      <Button type="submit" disabled={status === 'sending'} className="font-grotesk">
         {status === 'sending' ? 'Sending…' : 'Send message'}
-      </button>
+      </Button>
 
       {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
       {status === 'error' && <p className="text-red-600">Something went wrong. Try again later.</p>}
