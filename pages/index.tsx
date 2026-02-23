@@ -15,9 +15,9 @@ export default function Home() {
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
           <div className="flex flex-col md:flex-row gap-6 md:items-start">
             <div className="md:flex-1">
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
-              <p className="text-slate-500 text-base mb-4">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-accent text-white px-4 py-2 rounded">Join the CPO Interest List</Link>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold font-manrope leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <p className="text-slate-500 text-base mb-4 font-grotesk">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
+              <Link href="#contact" className="inline-block bg-accent text-white px-4 py-2 rounded font-grotesk">Join the CPO Interest List</Link>
             </div>
 
             <div className="md:flex-1 flex justify-center items-center">
@@ -29,17 +29,17 @@ export default function Home() {
 
       <main className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
         <section id="about">
-          <h2>Project overview</h2>
+          <h2 className="font-manrope">Project overview</h2>
           <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
         </section>
 
         <section id="team">
-          <h2>Founders</h2>
+          <h2 className="font-manrope">Founders</h2>
           <p>Introduce the core team and roles.</p>
         </section>
 
         <section id="map">
-          <h2>Location</h2>
+          <h2 className="font-manrope">Location</h2>
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <iframe
               title="Project location"
@@ -51,7 +51,7 @@ export default function Home() {
         </section>
 
         <section id="contact">
-          <h2>Contact / Join</h2>
+          <h2 className="font-manrope">Contact / Join</h2>
           <ContactForm />
         </section>
       </main>

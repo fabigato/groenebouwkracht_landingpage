@@ -29,7 +29,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <label className="block">
-        <span className="font-medium">Name</span>
+        <span className="font-medium font-grotesk">Name</span>
         <input
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
           value={name}
@@ -39,7 +39,7 @@ export default function ContactForm() {
       </label>
 
       <label className="block">
-        <span className="font-medium">Email</span>
+        <span className="font-medium font-grotesk">Email</span>
         <input
           type="email"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
@@ -50,7 +50,7 @@ export default function ContactForm() {
       </label>
 
       <label className="block">
-        <span className="font-medium">Message</span>
+        <span className="font-medium font-grotesk">Message</span>
         <textarea
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200 h-32"
           value={message}
@@ -62,7 +62,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="bg-accent text-white px-4 py-2 rounded disabled:opacity-50"
+        className="bg-accent text-white px-4 py-2 rounded disabled:opacity-50 font-grotesk"
       >
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>

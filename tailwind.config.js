@@ -11,7 +11,10 @@ module.exports = {
         'accent-dark': '#0955d6'
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto']
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto'],
+        manrope: ['Manrope', 'ui-sans-serif', 'system-ui', '-apple-system'],
+        grotesk: ['Space Grotesk', 'ui-sans-serif', 'system-ui', '-apple-system'],
+        dmsans: ['DM Sans', 'ui-sans-serif', 'system-ui', '-apple-system']
       },
       typography: (theme) => ({
         DEFAULT: {
