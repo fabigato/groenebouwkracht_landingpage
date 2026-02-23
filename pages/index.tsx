@@ -11,23 +11,23 @@ export default function Home() {
         <meta name="description" content="Join our CPO to build an apartment building in Amsterdam" />
       </Head>
 
-      <header className="hero">
-        <div className="container">
-          <div className="hero-inner">
-            <div className="hero-content">
-              <h1>Build Your Own Apartment in Amsterdam — Together.</h1>
-              <p className="lead">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="cta">Join the CPO Interest List</Link>
+      <header className="bg-white py-16 border-b border-gray-200">
+        <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
+          <div className="flex flex-col md:flex-row gap-8 md:items-center">
+            <div className="md:flex-1">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-3">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <p className="text-gray-600 text-lg mb-4">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
+              <Link href="#contact" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md">Join the CPO Interest List</Link>
             </div>
 
-            <div className="hero-visual">
-              <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="hero-img" />
+            <div className="md:flex-1 flex justify-center items-center">
+              <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-xl object-cover max-w-[560px]" />
             </div>
           </div>
         </div>
       </header>
 
-      <main className="container">
+      <main className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
         <section id="about">
           <h2>Project overview</h2>
           <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
@@ -40,14 +40,14 @@ export default function Home() {
 
         <section id="map">
           <h2>Location</h2>
-          <div style={{border:'1px solid #ddd',borderRadius:8,overflow:'hidden'}}>
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
             <iframe
               title="Project location"
               src="https://www.openstreetmap.org/export/embed.html?bbox=4.985139%2C52.333472%2C5.045139%2C52.373472&layer=mapnik&marker=52.353472%2C5.015139&zoom=14"
-              style={{width:'100%',height:360,border:0}}
+              className="w-full h-72 md:h-96 border-0"
             />
           </div>
-          <p style={{fontSize:12,color:'#666'}}>Map: OpenStreetMap</p>
+          <p className="text-xs text-gray-500">Map: OpenStreetMap</p>
         </section>
 
         <section id="contact">
@@ -56,7 +56,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="container">
+      <footer className="mx-auto px-6 max-w-[900px] md:max-w-[1100px] py-8 text-sm text-gray-600">
         <p>© {new Date().getFullYear()} CPO project — Built with Next.js</p>
       </footer>
     </div>

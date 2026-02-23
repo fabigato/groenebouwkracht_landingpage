@@ -27,24 +27,48 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <label>
-        Name
-        <input value={name} onChange={e => setName(e.target.value)} required />
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <label className="block">
+        <span className="font-medium">Name</span>
+        <input
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          required
+        />
       </label>
-      <label>
-        Email
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+
+      <label className="block">
+        <span className="font-medium">Email</span>
+        <input
+          type="email"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
       </label>
-      <label>
-        Message
-        <textarea value={message} onChange={e => setMessage(e.target.value)} required />
+
+      <label className="block">
+        <span className="font-medium">Message</span>
+        <textarea
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-200 h-32"
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+          required
+        />
       </label>
-      <button type="submit" disabled={status === 'sending'}>
+
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="bg-indigo-600 text-white px-4 py-2 rounded-md disabled:opacity-50"
+      >
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>
-      {status === 'sent' && <p className="success">Thanks — we'll be in touch.</p>}
-      {status === 'error' && <p className="error">Something went wrong. Try again later.</p>}
+
+      {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
+      {status === 'error' && <p className="text-red-600">Something went wrong. Try again later.</p>}
     </form>
   )
 }

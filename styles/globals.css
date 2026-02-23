@@ -18,27 +18,4 @@
   }
 }
 
-/* Small custom components kept as simple utility classes */
-.container{max-width:900px;margin:0 auto;padding:24px}
-.hero{background:white;padding:64px 0;border-bottom:1px solid #e6e6e9}
-.hero-inner{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-.hero-content{flex:1}
-.hero-visual{flex:1;display:flex;justify-content:center;align-items:center}
-.lead{color:#475569;margin:0 0 18px;font-size:18px}
-.cta{display:inline-block;background:var(--accent);color:white;padding:10px 16px;border-radius:6px;text-decoration:none}
-.hero-img, .hero-visual img{width:100%;height:auto;border-radius:12px;object-fit:cover;max-width:560px}
-section{margin:40px 0}
-.contact-form label{display:block;margin-bottom:12px}
-.contact-form input,.contact-form textarea{width:100%;padding:8px;border:1px solid #d6d6d9;border-radius:6px}
-.contact-form button{background:var(--accent);color:white;border:0;padding:10px 14px;border-radius:6px}
-.success{color:green}.error{color:#a00}
-
-@media(min-width:768px){
-  .hero-inner{flex-direction:row;align-items:center}
-  .hero h1{font-size:44px}
-  .container{max-width:1100px}
-}
-
-@media(min-width:1024px){
-  .hero h1{font-size:52px}
-}
+/* Using Tailwind utilities now — removed legacy component classes. */
