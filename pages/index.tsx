@@ -17,7 +17,7 @@ export default function Home() {
             <div className="flex-1">
               <h1 className="md:text-[44px] lg:text-[52px]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-slate-600 mb-[18px] text-lg">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-[#0b6efd] text-white py-3 px-8 rounded-xl no-underline">Join the CPO Interest List</Link>
+              <Link href="#contact" className="inline-block bg-[#0b6efd] text-[white] py-3 px-8 rounded-xl no-underline">Join the CPO Interest List</Link>
             </div>
 
             <div className="flex-1 flex justify-center items-center">
