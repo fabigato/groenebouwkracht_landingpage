@@ -40,7 +40,7 @@ export default function ContactForm() {
         Message
         <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <button type="submit" disabled={status === 'sending'} className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-xl cursor-pointer">
+      <button type="submit" disabled={status === 'sending'} className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer">
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>
       {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
