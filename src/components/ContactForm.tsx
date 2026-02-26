@@ -28,19 +28,19 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label className="block mb-3">
+      <label className="block mb-5">
         Name
         <input value={name} onChange={e => setName(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <label className="block mb-3">
+      <label className="block mb-5">
         Email
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <label className="block mb-3">
+      <label className="block mb-5">
         Message
         <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <button type="submit" disabled={status === 'sending'} className="bg-[#0b6efd] text-white border-0 py-[10px] px-[14px] rounded-md">
+      <button type="submit" disabled={status === 'sending'} className="bg-[#0b6efd] text-white border-0 py-[10px] px-[14px] rounded-xl cursor-pointer">
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>
       {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}

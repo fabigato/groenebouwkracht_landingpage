@@ -13,11 +13,11 @@ export default function Home() {
 
       <header className="bg-white py-16 border-b border-[#e6e6e9]">
         <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
-          <div className="flex flex-col gap-6 items-start md:flex-row md:items-center">
+          <div className="flex flex-row flex-wrap gap-6 items-center">
             <div className="flex-1">
               <h1 className="md:text-[44px] lg:text-[52px]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-slate-600 mb-[18px] text-lg">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-[#0b6efd] text-white py-[10px] px-4 rounded-md no-underline">Join the CPO Interest List</Link>
+              <Link href="#contact" className="inline-block bg-[#0b6efd] text-white py-3 px-8 rounded-xl no-underline">Join the CPO Interest List</Link>
             </div>
 
             <div className="flex-1 flex justify-center items-center">
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
+      <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-16">
         <section id="about" className="my-10">
           <h2>Project overview</h2>
           <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
