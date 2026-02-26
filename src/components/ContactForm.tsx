@@ -30,9 +30,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
+    <form onSubmit={handleSubmit} className="space-y-5 max-w-lg bg-white rounded-xl border border-gray-100 shadow-sm p-6 md:p-8">
       <div>
-        <label className="block text-sm font-medium mb-3">Name</label>
+        <label className="block text-sm font-medium text-slate-700 mb-1.5">Name</label>
         <Input
           value={name}
           onChange={e => setName(e.target.value)}
@@ -42,7 +42,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-3">Email</label>
+        <label className="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
         <Input
           type="email"
           value={email}
@@ -53,7 +53,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-3">Message</label>
+        <label className="block text-sm font-medium text-slate-700 mb-1.5">Message</label>
         <Textarea
           value={message}
           onChange={e => setMessage(e.target.value)}
@@ -62,12 +62,12 @@ export default function ContactForm() {
         />
       </div>
 
-      <Button type="submit" disabled={status === 'sending'}>
+      <Button type="submit" disabled={status === 'sending'} className="w-full">
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </Button>
 
-      {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
-      {status === 'error' && <p className="text-red-600">Something went wrong. Try again later.</p>}
+      {status === 'sent' && <p className="text-sm text-green-600">Thanks — we'll be in touch.</p>}
+      {status === 'error' && <p className="text-sm text-red-600">Something went wrong. Try again later.</p>}
     </form>
   )
 }

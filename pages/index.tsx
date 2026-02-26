@@ -15,9 +15,9 @@ export default function Home() {
         <div className="mx-auto px-6 max-w-[900px] md:max-w-[1100px]">
           <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
             <div className="flex-1">
-              <h1 className="text-2xl md:text-[44px] lg:text-[52px] font-bold leading-tight mb-3 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
-              <p className="text-slate-500 text-lg mb-[18px]">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <Link href="#contact" className="inline-block bg-[color:var(--accent)] text-white px-4 py-[10px] rounded-[6px] no-underline hover:brightness-90 transition-all">
+              <h1 className="text-2xl md:text-[44px] lg:text-[52px] font-extrabold tracking-tight leading-tight mb-4 text-[color:var(--text)]">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <p className="text-slate-500 text-lg mb-6">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
+              <Link href="#contact" className="inline-block bg-[color:var(--accent)] text-white text-sm font-semibold px-5 py-2.5 rounded-lg no-underline hover:brightness-90 transition-all">
                 Join the CPO Interest List
               </Link>
             </div>
@@ -31,17 +31,17 @@ export default function Home() {
 
       <main className="mx-auto px-6 py-6 max-w-[900px] md:max-w-[1100px]">
         <section id="about" className="my-10">
-          <h2>Project overview</h2>
+          <h2 className="text-xl font-semibold tracking-tight mb-3">Project overview</h2>
           <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
         </section>
 
         <section id="team" className="my-10">
-          <h2>Founders</h2>
+          <h2 className="text-xl font-semibold tracking-tight mb-3">Founders</h2>
           <p>Introduce the core team and roles.</p>
         </section>
 
         <section id="map" className="my-10">
-          <h2>Location</h2>
+          <h2 className="text-xl font-semibold tracking-tight mb-3">Location</h2>
           <div className="border border-gray-200 rounded-lg overflow-hidden">
             <iframe
               title="Project location"
@@ -53,7 +53,7 @@ export default function Home() {
         </section>
 
         <section id="contact" className="my-10">
-          <h2>Contact / Join</h2>
+          <h2 className="text-xl font-semibold tracking-tight mb-6">Contact / Join</h2>
           <ContactForm />
         </section>
       </main>
