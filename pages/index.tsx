@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Join our CPO to build an apartment building in Amsterdam" />
       </Head>
 
-      <header className="bg-white py-16 border-b border-[#e6e6e9]">
+      <header className="bg-white py-16 border-b border-[#e6e6e9] min-h-[400px]">
         <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
           <div className="flex flex-row flex-wrap gap-6 items-center">
             <div className="flex-1">
@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-16">
+      <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-24">
         <section id="about" className="my-10">
           <h2>Project overview</h2>
           <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
