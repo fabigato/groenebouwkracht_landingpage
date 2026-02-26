@@ -27,24 +27,24 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <label>
+    <form onSubmit={handleSubmit}>
+      <label className="block mb-3">
         Name
-        <input value={name} onChange={e => setName(e.target.value)} required />
+        <input value={name} onChange={e => setName(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <label>
+      <label className="block mb-3">
         Email
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <label>
+      <label className="block mb-3">
         Message
-        <textarea value={message} onChange={e => setMessage(e.target.value)} required />
+        <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
-      <button type="submit" disabled={status === 'sending'}>
+      <button type="submit" disabled={status === 'sending'} className="bg-[#0b6efd] text-white border-0 py-[10px] px-[14px] rounded-md">
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </button>
-      {status === 'sent' && <p className="success">Thanks — we'll be in touch.</p>}
-      {status === 'error' && <p className="error">Something went wrong. Try again later.</p>}
+      {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
+      {status === 'error' && <p className="text-[#a00]">Something went wrong. Try again later.</p>}
     </form>
   )
 }
