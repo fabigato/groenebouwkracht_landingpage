@@ -30,9 +30,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-3">
       <div>
-        <label className="block text-sm font-medium font-manrope mb-1">Name</label>
+        <label className="block text-sm font-medium mb-3">Name</label>
         <Input
           value={name}
           onChange={e => setName(e.target.value)}
@@ -42,7 +42,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium font-manrope mb-1">Email</label>
+        <label className="block text-sm font-medium mb-3">Email</label>
         <Input
           type="email"
           value={email}
@@ -53,7 +53,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium font-manrope mb-1">Message</label>
+        <label className="block text-sm font-medium mb-3">Message</label>
         <Textarea
           value={message}
           onChange={e => setMessage(e.target.value)}
@@ -62,7 +62,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <Button type="submit" disabled={status === 'sending'} className="font-grotesk">
+      <Button type="submit" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send message'}
       </Button>
 

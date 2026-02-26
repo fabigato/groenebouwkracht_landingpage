@@ -10,7 +10,7 @@
   --muted-foreground: 0 0% 45.1%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;600;700&family=DM+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
