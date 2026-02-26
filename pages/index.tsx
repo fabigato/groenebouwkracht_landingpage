@@ -10,7 +10,7 @@ export default function Home() {
         <meta name="description" content="Join our CPO to build an apartment building in Amsterdam" />
       </Head>
 
-      <header className="bg-white py-16 border-b border-[#e6e6e9] min-h-[400px]">
+      <header className="bg-white py-16 border-b border-[#e6e6e9] min-h-[560px]">
         <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
           <div className="flex flex-row flex-wrap gap-6 items-center">
             <div className="flex-1">
@@ -20,7 +20,7 @@ export default function Home() {
             </div>
 
             <div className="flex-1 flex justify-center items-center">
-              <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-xl object-cover max-w-[560px]" />
+              <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-[12px] object-cover max-w-[560px]" />
             </div>
           </div>
         </div>
