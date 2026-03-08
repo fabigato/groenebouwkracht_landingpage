@@ -13,14 +13,35 @@ if (SENDGRID_API_KEY) {
   }
 }
 
+async function verifyTurnstile(token: string, ip: string | undefined): Promise<boolean> {
+  const formData = new URLSearchParams()
+  formData.append('secret', process.env.TURNSTILE_SECRET_KEY || '')
+  formData.append('response', token)
+  if (ip) formData.append('remoteip', ip)
+  const r = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body: formData,
+  })
+  const data = await r.json()
+  return data.success === true
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     return res.status(405).end('Method Not Allowed')
   }
-  const { name, email, message } = req.body || {}
+  const { name, email, message, captchaToken } = req.body || {}
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing fields' })
+  }
+  if (!captchaToken) {
+    return res.status(400).json({ error: 'Missing captcha' })
+  }
+  const ip = req.headers['cf-connecting-ip'] as string | undefined ?? req.socket.remoteAddress
+  const captchaOk = await verifyTurnstile(captchaToken, ip)
+  if (!captchaOk) {
+    return res.status(400).json({ error: 'Captcha verification failed' })
   }
 
   const subject = `New contact form submission from ${name}`
