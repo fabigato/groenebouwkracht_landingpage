@@ -14,7 +14,7 @@ export default function Home() {
         <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
           <div className="flex flex-row flex-wrap gap-6 items-center">
             <div className="flex-1">
-              <h1 className="md:text-[44px] lg:text-[52px]">Build Your Own Apartment in Amsterdam — Together.</h1>
+              <h1 className="font-bold md:text-[44px] lg:text-[52px]">Build Your Own Apartment in Amsterdam — Together.</h1>
               <p className="text-slate-600 mb-[18px] text-lg">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
               <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})} className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer">Join the CPO Interest List</button>
             </div>
