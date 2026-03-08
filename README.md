@@ -10,13 +10,14 @@ npm install
 npm run dev
 ```
 
-The contact form posts to `/api/contact` which currently logs to the server console. Replace that implementation with an email provider (SendGrid, Mailgun) or save to a database.
+The contact form posts to `/api/contact` uses SendGrid as email provider. We use cloudflare's turnstile for captcha
 
-SendGrid setup
+Setup
 
 1. Create a SendGrid account and get an API key.
 2. Verify a sender identity or domain in SendGrid.
 3. Copy `.env.example` to `.env.local` and fill `SENDGRID_API_KEY`, `CONTACT_RECIPIENTS`, and `SENDER_EMAIL`.
+4. Setup an accound on cloudflare, get the values for `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` from there and put them in env.local
 4. Install dependencies and run the app.
 
 Deploying to Vercel
