@@ -37,7 +37,9 @@ export default function Home() {
       <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-24">
         <section id="about" className="my-10">
           <h2>{t.aboutTitle}</h2>
-          <p>{t.aboutText}</p>
+          {t.aboutText.split('\n\n').map((para, i) => (
+            <p key={i} className="mb-4">{para}</p>
+          ))}
         </section>
 
         <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
