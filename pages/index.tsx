@@ -1,22 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ContactForm from '../src/components/ContactForm'
+import LanguageToggle from '../src/components/LanguageToggle'
+import { useLanguage } from '../src/context/LanguageContext'
 
 export default function Home() {
+  const { t } = useLanguage()
+
   return (
     <div>
       <Head>
-        <title>Build with CPO — Amsterdam project</title>
-        <meta name="description" content="Join our CPO to build an apartment building in Amsterdam" />
+        <title>{t.pageTitle}</title>
+        <meta name="description" content={t.pageDescription} />
       </Head>
 
       <header className="bg-white py-16 border-b border-[#e6e6e9] min-h-[560px]">
         <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
+          <div className="flex justify-end mb-4">
+            <LanguageToggle />
+          </div>
           <div className="flex flex-row flex-wrap gap-6 items-center">
             <div className="flex-1">
-              <h1 className="font-bold md:text-[44px] lg:text-[52px]">Build Your Own Apartment in Amsterdam — Together.</h1>
-              <p className="text-slate-600 mb-[18px] text-lg">Join a small, committed CPO collective to co-design sustainable housing in Amsterdam.</p>
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})} className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer">Join the CPO Interest List</button>
+              <h1 className="font-bold md:text-[44px] lg:text-[52px]">{t.heroTitle}</h1>
+              <p className="text-slate-600 mb-[18px] text-lg">{t.heroSubtitle}</p>
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior:'smooth'})} className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer">{t.heroButton}</button>
             </div>
 
             <div className="flex-1 flex justify-center items-center">
@@ -28,17 +35,17 @@ export default function Home() {
 
       <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-24">
         <section id="about" className="my-10">
-          <h2>Project overview</h2>
-          <p>Short pitch about location, ambitions, timeline and what you're looking for.</p>
+          <h2>{t.aboutTitle}</h2>
+          <p>{t.aboutText}</p>
         </section>
 
         <section id="team" className="my-10">
-          <h2>Founders</h2>
-          <p>Introduce the core team and roles.</p>
+          <h2>{t.teamTitle}</h2>
+          <p>{t.teamText}</p>
         </section>
 
         <section id="map" className="my-10">
-          <h2>Location</h2>
+          <h2>{t.locationTitle}</h2>
           <div className="border border-[#ddd] rounded-[8px] overflow-hidden">
             <iframe
               title="Project location"
@@ -46,17 +53,17 @@ export default function Home() {
               className="w-full h-[360px] border-0"
             />
           </div>
-          <p className="text-xs text-[#666]">Map: OpenStreetMap</p>
+          <p className="text-xs text-[#666]">{t.mapAttribution}</p>
         </section>
 
         <section id="contact" className="my-10">
-          <h2>Contact / Join</h2>
+          <h2>{t.contactTitle}</h2>
           <ContactForm />
         </section>
       </main>
 
       <footer className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
-        <p>© {new Date().getFullYear()} CPO project — Built with Next.js</p>
+        <p>{t.footer}</p>
       </footer>
     </div>
   )

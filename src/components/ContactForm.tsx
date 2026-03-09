@@ -1,8 +1,10 @@
 import { useState, useRef } from 'react'
 import { Turnstile } from '@marsidev/react-turnstile'
 import type { TurnstileInstance } from '@marsidev/react-turnstile'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function ContactForm() {
+  const { t } = useLanguage()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -38,15 +40,15 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label className="block mb-5">
-        Name
+        {t.form.name}
         <input value={name} onChange={e => setName(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
       <label className="block mb-5">
-        Email
+        {t.form.email}
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
       <label className="block mb-5">
-        Message
+        {t.form.message}
         <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
       </label>
       <Turnstile
@@ -57,10 +59,10 @@ export default function ContactForm() {
         className="my-4"
       />
       <button type="submit" disabled={status === 'sending' || !captchaToken} className="bg-[#0b6efd] text-[white] border-0 mt-[32px] py-[10px] px-[14px] rounded-full cursor-pointer disabled:opacity-50">
-        {status === 'sending' ? 'Sending…' : 'Send message'}
+        {status === 'sending' ? t.form.sending : t.form.send}
       </button>
-      {status === 'sent' && <p className="text-green-600">Thanks — we'll be in touch.</p>}
-      {status === 'error' && <p className="text-[#a00]">Something went wrong. Try again later.</p>}
+      {status === 'sent' && <p className="text-green-600">{t.form.success}</p>}
+      {status === 'error' && <p className="text-[#a00]">{t.form.error}</p>}
     </form>
   )
 }
