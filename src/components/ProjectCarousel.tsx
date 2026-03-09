@@ -25,16 +25,29 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
       <h2>{title}</h2>
 
       <div className="relative mt-6 rounded-[12px] overflow-hidden bg-[#f4f4f5]">
-        {/* Image */}
-        <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
-          <Image
-            key={current}
-            src={slides[current].src}
-            alt={slides[current].alt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 1100px) 100vw, 1100px"
-          />
+        {/* Film strip — all slides in a row, shifted by translateX */}
+        <div
+          className="flex"
+          style={{
+            transform: `translateX(-${current * 100}%)`,
+            transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          {slides.map((slide, i) => (
+            <div
+              key={i}
+              className="relative shrink-0 w-full"
+              style={{ aspectRatio: '16/9' }}
+            >
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1100px) 100vw, 1100px"
+              />
+            </div>
+          ))}
         </div>
 
         {/* Prev / Next buttons */}
@@ -59,8 +72,14 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
         </div>
       </div>
 
-      {/* Caption */}
-      <p className="mt-4 text-slate-600 text-base">{slides[current].caption}</p>
+      {/* Caption — fades on change via key */}
+      <p
+        key={current}
+        className="mt-4 text-slate-600 text-base"
+        style={{ animation: 'fadeIn 0.35s ease' }}
+      >
+        {slides[current].caption}
+      </p>
 
       {/* Dot indicators */}
       <div className="flex gap-2 mt-3">
@@ -73,6 +92,13 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
           />
         ))}
       </div>
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(4px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </section>
   )
 }
