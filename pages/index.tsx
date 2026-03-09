@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import ContactForm from '../src/components/ContactForm'
 import LanguageToggle from '../src/components/LanguageToggle'
+import ProjectCarousel from '../src/components/ProjectCarousel'
 import { useLanguage } from '../src/context/LanguageContext'
 
 export default function Home() {
@@ -38,6 +39,8 @@ export default function Home() {
           <h2>{t.aboutTitle}</h2>
           <p>{t.aboutText}</p>
         </section>
+
+        <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
 
         <section id="team" className="my-10">
           <h2>{t.teamTitle}</h2>
