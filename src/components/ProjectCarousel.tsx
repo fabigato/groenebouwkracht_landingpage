@@ -73,13 +73,15 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
       </div>
 
       {/* Caption — fades on change via key */}
-      <p
+      <div
         key={current}
         className="mt-4 text-slate-600 text-base"
         style={{ animation: 'fadeIn 0.35s ease' }}
       >
-        {slides[current].caption}
-      </p>
+        {slides[current].caption.split('\n\n').map((para, i) => (
+          <p key={i} className="mb-3">{para}</p>
+        ))}
+      </div>
 
       {/* Dot indicators */}
       <div className="flex gap-2 mt-3">
