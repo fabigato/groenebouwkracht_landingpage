@@ -46,7 +46,9 @@ export default function Home() {
 
         <section id="team" className="my-10">
           <h2>{t.teamTitle}</h2>
-          <p>{t.teamText}</p>
+          {t.teamText.split('\n\n').map((para, i) => (
+            <p key={i} className="mb-4">{para}</p>
+          ))}
         </section>
 
         <section id="map" className="my-10">
