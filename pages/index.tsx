@@ -67,6 +67,11 @@ export default function Home() {
           <h2>{t.contactTitle}</h2>
           <ContactForm />
         </section>
+
+        <section id="links" className="my-10">
+          <h2>{t.linksTitle}</h2>
+          <a href="/documents/kavelregels.pdf" target="_blank" rel="noopener noreferrer">{t.plotRulesLink}</a>
+        </section>
       </main>
 
       <footer className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">

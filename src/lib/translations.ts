@@ -21,6 +21,8 @@ export const translations = {
     mapAttribution: 'Map: OpenStreetMap',
     contactTitle: 'Contact / Join',
     footer: `© ${new Date().getFullYear()} CPO project — Built with Next.js`,
+    linksTitle: 'Links',
+    plotRulesLink: 'Plot rules',
     form: {
       name: 'Name',
       email: 'Email',
@@ -51,6 +53,8 @@ export const translations = {
     mapAttribution: 'Kaart: OpenStreetMap',
     contactTitle: 'Contact / Aanmelden',
     footer: `© ${new Date().getFullYear()} CPO-project — Gebouwd met Next.js`,
+    linksTitle: 'Links',
+    plotRulesLink: 'Kavel regels',
     form: {
       name: 'Naam',
       email: 'E-mail',
