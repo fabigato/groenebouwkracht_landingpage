@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ContactForm from '../src/components/ContactForm'
 import LanguageToggle from '../src/components/LanguageToggle'
 import ProjectCarousel from '../src/components/ProjectCarousel'
+import ProjectTimeline from '../src/components/ProjectTimeline'
 import { useLanguage } from '../src/context/LanguageContext'
 
 export default function Home() {
@@ -41,6 +42,8 @@ export default function Home() {
             <p key={i} className="mb-4">{para}</p>
           ))}
         </section>
+
+        <ProjectTimeline />
 
         <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
 
