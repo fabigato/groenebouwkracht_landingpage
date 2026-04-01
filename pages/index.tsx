@@ -47,13 +47,6 @@ export default function Home() {
 
         <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
 
-        <section id="team" className="my-10">
-          <h2>{t.teamTitle}</h2>
-          {t.teamText.split('\n\n').map((para, i) => (
-            <p key={i} className="mb-4">{para}</p>
-          ))}
-        </section>
-
         <section id="map" className="my-10">
           <h2>{t.locationTitle}</h2>
           <div className="border border-[#ddd] rounded-[8px] overflow-hidden">
@@ -71,10 +64,6 @@ export default function Home() {
           <ContactForm />
         </section>
 
-        <section id="links" className="my-10">
-          <h2>{t.linksTitle}</h2>
-          <a href="/documents/kavelregels.pdf" target="_blank" rel="noopener noreferrer">{t.plotRulesLink}</a>
-        </section>
       </main>
 
       <footer className="max-w-[900px] md:max-w-[1100px] mx-auto p-6">
