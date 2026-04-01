@@ -24,6 +24,16 @@ export const translations = {
     linksTitle: 'Links',
     plotRulesLink: 'Plot rules',
     halloPublicationsLink: 'hallocentrumeiland - publications',
+    qaTitle: 'Q&A',
+    qaItems: [
+      { q: 'How many spots are left?', a: '14' },
+      { q: 'How do I become a member?', a: 'If you\'re interested, we schedule a conversation. If there\'s a mutual fit, you become a member of our cooperative association.' },
+      { q: 'How much is the initial contribution?', a: '€30k. You pay this in phases.' },
+      { q: 'When can I apply for a mortgage?', a: 'Q4 2027, once the building permit has been finalised.' },
+      { q: 'When will my home be ready?', a: 'If all goes to plan, Q1 2029.' },
+      { q: 'What if I change my mind?', a: 'We look for a replacement who takes over your spot and contribution.' },
+      { q: 'Is there an owner-occupancy requirement?', a: 'Yes, approximately 4 years after completion.' },
+    ],
     form: {
       name: 'Name',
       email: 'Email',
@@ -57,6 +67,16 @@ export const translations = {
     linksTitle: 'Links',
     plotRulesLink: 'Kavel regels',
     halloPublicationsLink: 'hallocentrumeiland - publicaties',
+    qaTitle: 'Q&A',
+    qaItems: [
+      { q: 'Hoeveel plekken zijn er nog?', a: '14' },
+      { q: 'Hoe word ik lid?', a: 'Bij interesse plannen we een gesprek. Is er een wederzijdse klik dan word je lid van onze coöperatieve vereniging.' },
+      { q: 'Hoeveel is de inleg om mee te doen?', a: '€30k. Dit leg je in in fases.' },
+      { q: 'Wanneer kan ik een hypotheek aanvragen?', a: 'Q4 2027 als de bouwvergunning rond is.' },
+      { q: 'Wanneer is mijn woning klaar?', a: 'Als het goed is Q1 2029.' },
+      { q: 'Wat als ik me toch bedenk?', a: 'Dan zoeken we een vervanger die jouw plek en inleg overneemt.' },
+      { q: 'Is er een zelfbewoningsplicht?', a: 'Ja, ongeveer 4 jaar na oplevering.' },
+    ],
     form: {
       name: 'Naam',
       email: 'E-mail',
