@@ -22,9 +22,14 @@ export default function Links() {
 
       <main className="max-w-[900px] md:max-w-[1100px] mx-auto px-6 pb-6 pt-12">
         <section>
-          <a href="/documents/kavelregels.pdf" target="_blank" rel="noopener noreferrer">
-            {t.plotRulesLink}
-          </a>
+          <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <li style={{ fontSize: '1.2rem' }}>
+              <a href="/documents/kavelregels.pdf" target="_blank" rel="noopener noreferrer">{t.plotRulesLink}</a>
+            </li>
+            <li style={{ fontSize: '1.2rem' }}>
+              <a href="https://hallocentrumeiland.nl/publicaties" target="_blank" rel="noopener noreferrer">{t.halloPublicationsLink}</a>
+            </li>
+          </ul>
         </section>
       </main>
 

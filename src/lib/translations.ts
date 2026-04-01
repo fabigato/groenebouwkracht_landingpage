@@ -23,6 +23,7 @@ export const translations = {
     footer: `© ${new Date().getFullYear()} CPO project — Built with Next.js`,
     linksTitle: 'Links',
     plotRulesLink: 'Plot rules',
+    halloPublicationsLink: 'hallocentrumeiland - publications',
     form: {
       name: 'Name',
       email: 'Email',
@@ -55,6 +56,7 @@ export const translations = {
     footer: `© ${new Date().getFullYear()} CPO-project — Gebouwd met Next.js`,
     linksTitle: 'Links',
     plotRulesLink: 'Kavel regels',
+    halloPublicationsLink: 'hallocentrumeiland - publicaties',
     form: {
       name: 'Naam',
       email: 'E-mail',
