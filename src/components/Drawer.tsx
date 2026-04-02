@@ -1,13 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/founders', label: 'Founders' },
-  { href: '/qa', label: 'Q&A' },
-  { href: '/links', label: 'Links' },
-]
+import { navItems } from '../lib/navItems'
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +12,7 @@ export default function Drawer() {
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Open menu"
+        className="md:hidden"
         style={{
           position: 'fixed',
           top: '1rem',
