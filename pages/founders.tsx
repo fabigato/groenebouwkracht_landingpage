@@ -8,14 +8,25 @@ export default function Founders() {
   return (
     <Layout title={`${t.teamTitle} — ${t.pageTitle}`} pageTitle={t.teamTitle}>
       <section className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="rounded-[12px] overflow-hidden shrink-0 w-full md:w-[300px]">
-          <Image
-            src="/images/founders.jpg"
-            alt="De oprichters van Groene Bouwkracht"
-            width={300}
-            height={400}
-            className="w-full h-auto"
-          />
+        <div className="shrink-0 w-full md:w-[300px] flex flex-col gap-4">
+          <div className="rounded-[12px] overflow-hidden">
+            <Image
+              src="/images/founders2.jpg"
+              alt="De groep op het strand"
+              width={300}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
+          <div className="rounded-[12px] overflow-hidden">
+            <Image
+              src="/images/founders.jpg"
+              alt="De oprichters van Groene Bouwkracht"
+              width={300}
+              height={400}
+              className="w-full h-auto"
+            />
+          </div>
         </div>
         <div>
           {t.teamText.split('\n\n').map((para, i) => (
