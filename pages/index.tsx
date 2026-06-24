@@ -11,11 +11,11 @@ export default function Home() {
   const hero = (
     <div className="flex flex-row flex-wrap gap-6 items-center">
       <div className="flex-1">
-        <h1 className="font-bold md:text-[44px] lg:text-[52px]">{t.heroTitle}</h1>
-        <p className="text-slate-600 mb-[18px] text-lg">{t.heroSubtitle}</p>
+        <h1 className="font-bold md:text-[44px] lg:text-[52px]" style={{ color: '#1b4332' }}>{t.heroTitle}</h1>
+        <p className="mb-[18px] text-lg" style={{ color: '#5c4f3a' }}>{t.heroSubtitle}</p>
         <button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-[#0b6efd] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer"
+          className="bg-[#2d6a4f] hover:bg-[#1b4332] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer transition"
         >
           {t.heroButton}
         </button>
@@ -41,7 +41,7 @@ export default function Home() {
 
       <section id="map" className="my-10">
         <h2>{t.locationTitle}</h2>
-        <div className="border border-[#ddd] rounded-[8px] overflow-hidden">
+        <div className="border border-[#d4c9a8] rounded-[8px] overflow-hidden">
           <iframe
             title="Project location"
             src="https://www.openstreetmap.org/export/embed.html?bbox=4.985139%2C52.333472%2C5.045139%2C52.373472&layer=mapnik&marker=52.353472%2C5.015139&zoom=14"

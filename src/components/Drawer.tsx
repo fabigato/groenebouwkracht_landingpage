@@ -87,7 +87,7 @@ export default function Drawer() {
                 fontWeight: 500,
                 fontSize: '1rem',
                 textDecoration: 'none',
-                background: pathname === href ? '#0b6efd' : 'transparent',
+                background: pathname === href ? '#2d6a4f' : 'transparent',
                 color: pathname === href ? 'white' : '#0f1720',
                 transition: 'background 150ms',
               }}
