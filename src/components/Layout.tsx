@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
-import { navItems } from '../lib/navItems'
+import { getNavItems } from '../lib/navItems'
 import LanguageToggle from './LanguageToggle'
 import HangingPlant from './HangingPlant'
 import { useLanguage } from '../context/LanguageContext'
@@ -16,8 +16,9 @@ interface LayoutProps {
 }
 
 export default function Layout({ title, description, pageTitle, headerContent, children }: LayoutProps) {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const { pathname } = useRouter()
+  const navItems = getNavItems(lang)
 
   return (
     <div>

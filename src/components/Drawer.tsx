@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { navItems } from '../lib/navItems'
+import { getNavItems } from '../lib/navItems'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState(false)
   const { pathname } = useRouter()
+  const { lang } = useLanguage()
+  const navItems = getNavItems(lang)
 
   return (
     <>
