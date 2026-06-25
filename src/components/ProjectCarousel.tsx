@@ -24,7 +24,7 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
     <section id="gallery" className="my-10">
       <h2>{title}</h2>
 
-      <div className="relative mt-6 rounded-[12px] overflow-hidden bg-[#f4f4f5]">
+      <div className="relative mt-6 rounded-[12px] overflow-hidden bg-[#e8dcc8]">
         {/* Film strip — all slides in a row, shifted by translateX */}
         <div
           className="flex"
@@ -79,7 +79,7 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
         style={{ animation: 'fadeIn 0.35s ease' }}
       >
         {slides[current].caption.split('\n\n').map((para, i) => (
-          <p key={i} className="mb-3">{para}</p>
+          <p key={i} className="mb-3" style={{ color: '#5c4f3a' }}>{para}</p>
         ))}
       </div>
 
@@ -90,7 +90,7 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition ${i === current ? 'bg-[#0b6efd]' : 'bg-[#ccc]'}`}
+            className={`w-2 h-2 rounded-full transition ${i === current ? 'bg-[#2d6a4f]' : 'bg-[#ccc]'}`}
           />
         ))}
       </div>

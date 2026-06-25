@@ -41,15 +41,15 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit}>
       <label className="block mb-5">
         {t.form.name}
-        <input value={name} onChange={e => setName(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
+        <input value={name} onChange={e => setName(e.target.value)} required className="w-full p-2 border border-[#d4c9a8] rounded-md bg-white" />
       </label>
       <label className="block mb-5">
         {t.form.email}
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-2 border border-[#d4c9a8] rounded-md bg-white" />
       </label>
       <label className="block mb-5">
         {t.form.message}
-        <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d6d6d9] rounded-md" />
+        <textarea value={message} onChange={e => setMessage(e.target.value)} required className="w-full p-2 border border-[#d4c9a8] rounded-md bg-white" />
       </label>
       <Turnstile
         ref={turnstileRef}
@@ -58,7 +58,7 @@ export default function ContactForm() {
         onExpire={() => setCaptchaToken(null)}
         className="my-4"
       />
-      <button type="submit" disabled={status === 'sending' || !captchaToken} className="bg-[#0b6efd] text-[white] border-0 mt-[32px] py-[10px] px-[14px] rounded-full cursor-pointer disabled:opacity-50">
+      <button type="submit" disabled={status === 'sending' || !captchaToken} className="bg-[#2d6a4f] hover:bg-[#1b4332] text-[white] border-0 mt-[32px] py-[10px] px-[14px] rounded-full cursor-pointer disabled:opacity-50 transition">
         {status === 'sending' ? t.form.sending : t.form.send}
       </button>
       {status === 'sent' && <p className="text-green-600">{t.form.success}</p>}

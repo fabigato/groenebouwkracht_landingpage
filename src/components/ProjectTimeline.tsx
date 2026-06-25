@@ -77,9 +77,9 @@ const PHASES: Phase[] = [
 ]
 
 function barColor(done: boolean, type?: string): string {
-  if (done) return '#16a34a'
-  if (type === 'spanning') return '#7c3aed'
-  return '#0b6efd'
+  if (done) return '#2d6a4f'
+  if (type === 'spanning') return '#8b6f47'
+  return '#52b788'
 }
 
 export default function ProjectTimeline() {
@@ -96,7 +96,7 @@ export default function ProjectTimeline() {
         <div style={{ minWidth, fontFamily: 'inherit' }}>
 
           {/* Year header */}
-          <div style={{ display: 'flex', backgroundColor: '#f8f9fa', borderBottom: '1px solid #e6e6e9' }}>
+          <div style={{ display: 'flex', backgroundColor: '#ede6d8', borderBottom: '1px solid #e6e6e9' }}>
             <div style={{ width: LABEL_WIDTH, flexShrink: 0 }} />
             <div style={{ flex: 1, display: 'flex' }}>
               {[
@@ -121,7 +121,7 @@ export default function ProjectTimeline() {
           </div>
 
           {/* Quarter header */}
-          <div style={{ display: 'flex', backgroundColor: '#f8f9fa', borderBottom: '2px solid #d1d5db' }}>
+          <div style={{ display: 'flex', backgroundColor: '#ede6d8', borderBottom: '2px solid #d1d5db' }}>
             <div style={{ width: LABEL_WIDTH, flexShrink: 0 }} />
             <div style={{ flex: 1, display: 'flex' }}>
               {QUARTER_LABELS.map((q) => (
@@ -145,10 +145,10 @@ export default function ProjectTimeline() {
               {/* Phase label */}
               <div style={{
                 padding: '6px 12px',
-                backgroundColor: '#eef2ff',
+                backgroundColor: '#e8dcc8',
                 fontSize: '11px',
                 fontWeight: 700,
-                color: '#3730a3',
+                color: '#1b4332',
                 letterSpacing: '0.07em',
                 textTransform: 'uppercase',
                 borderBottom: '1px solid #e6e6e9',
@@ -218,18 +218,18 @@ export default function ProjectTimeline() {
             fontSize: '12px',
             color: '#6b7280',
             borderTop: '1px solid #e6e6e9',
-            backgroundColor: '#fafafa',
+            backgroundColor: '#f5f0e8',
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#16a34a' }} />
+              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#2d6a4f' }} />
               {lang === 'nl' ? 'Afgerond' : 'Completed'}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#0b6efd', opacity: 0.82 }} />
+              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#52b788', opacity: 0.82 }} />
               {lang === 'nl' ? 'Gepland' : 'Planned'}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#7c3aed', opacity: 0.82 }} />
+              <div style={{ width: 14, height: 10, borderRadius: 2, backgroundColor: '#8b6f47', opacity: 0.82 }} />
               {lang === 'nl' ? 'Doorlopend traject' : 'Ongoing track'}
             </div>
           </div>

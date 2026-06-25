@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { navItems } from '../lib/navItems'
+import { getNavItems } from '../lib/navItems'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Drawer() {
   const [isOpen, setIsOpen] = useState(false)
   const { pathname } = useRouter()
+  const { lang } = useLanguage()
+  const navItems = getNavItems(lang)
 
   return (
     <>
@@ -87,7 +90,7 @@ export default function Drawer() {
                 fontWeight: 500,
                 fontSize: '1rem',
                 textDecoration: 'none',
-                background: pathname === href ? '#0b6efd' : 'transparent',
+                background: pathname === href ? '#2d6a4f' : 'transparent',
                 color: pathname === href ? 'white' : '#0f1720',
                 transition: 'background 150ms',
               }}
