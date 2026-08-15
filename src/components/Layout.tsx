@@ -41,7 +41,7 @@ export default function Layout({ title, description, pageTitle, headerContent, c
           <HangingPlant variant={4} width={35} style={{ right: '38%' }} className="hidden lg:block" flip />
           <HangingPlant variant={2} width={80} style={{ right: '30%' }} className="hidden lg:block" />
           <HangingPlant variant={1} width={45} style={{ right: '25%' }} className="hidden md:block" flip />
-          <HangingPlant variant={3} width={60} style={{ right: '18%' }} className="hidden md:block" />
+          <HangingPlant variant={3} width={38} style={{ right: '18%' }} className="hidden md:block" />
           <HangingPlant variant={4} width={30} style={{ right: '13%' }} flip />
           <HangingPlant variant={3} width={90} style={{ right: '5%' }} />
           <HangingPlant variant={2} width={50} style={{ right: '2%' }} flip />
