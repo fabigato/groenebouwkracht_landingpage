@@ -81,9 +81,10 @@ export default function Layout({ title, description, pageTitle, headerContent, c
             </Link>
           ))}
         </nav>
-        <div className="absolute top-6 right-6">
-          <LanguageToggle />
-        </div>
+      </div>
+
+      <div className="fixed top-4 right-4 z-50">
+        <LanguageToggle />
       </div>
 
       <header className={`relative${headerContent ? '' : ' pb-16'}`}>
