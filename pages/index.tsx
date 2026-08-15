@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../src/components/Layout'
 import { useLanguage } from '../src/context/LanguageContext'
@@ -7,26 +6,25 @@ export default function Home() {
   const { t } = useLanguage()
 
   const hero = (
-    <div className="flex flex-row flex-wrap gap-6 items-center">
-      <div className="flex-1">
-        <h1 className="font-bold md:text-[44px] lg:text-[52px]" style={{ color: '#1b4332' }}>{t.heroTitle}</h1>
-        <p className="mb-[18px] text-lg" style={{ color: '#5c4f3a' }}>{t.heroSubtitle}</p>
-        <p className="mb-[24px] text-base" style={{ color: '#5c4f3a' }}>{t.heroCta}</p>
-        <Link
-          href="/contact"
-          className="bg-[#2d6a4f] hover:bg-[#1b4332] text-[white] border-0 py-[10px] px-[14px] rounded-full cursor-pointer transition no-underline"
-        >
-          {t.heroButton}
-        </Link>
-      </div>
-      <div className="flex-1 flex justify-center items-center">
-        <Image src="/images/hero.png" alt="Apartment illustration" width={600} height={400} className="w-full h-auto rounded-[12px] object-cover max-w-[560px]" />
+    <div
+      className="relative overflow-hidden rounded-[16px]"
+      style={{
+        backgroundImage: 'url(/images/hero.png)',
+        backgroundSize: '100% 100%',
+        backgroundPosition: 'center',
+        aspectRatio: '1656 / 1100',
+      }}
+    >
+      <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.45)' }} />
+      <div className="absolute inset-0 z-10 flex items-start justify-center pt-8 md:pt-12">
+        <h1 className="font-bold text-[32px] md:text-[44px] lg:text-[52px] text-center" style={{ color: '#f5f0e8' }}>{t.heroTitle}</h1>
       </div>
     </div>
   )
 
   return (
     <Layout title={t.pageTitle} description={t.pageDescription} headerContent={hero}>
+      {null}
     </Layout>
   )
 }

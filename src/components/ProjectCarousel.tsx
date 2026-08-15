@@ -67,7 +67,7 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
         </button>
 
         {/* Counter */}
-        <div className="absolute bottom-3 right-4 text-sm text-white bg-black/40 rounded-full px-3 py-1">
+        <div className="absolute bottom-3 right-4 text-sm text-[#f5f0e8] bg-black/40 rounded-full px-3 py-1">
           {current + 1} / {slides.length}
         </div>
       </div>

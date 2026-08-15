@@ -58,7 +58,7 @@ export default function ContactForm() {
         onExpire={() => setCaptchaToken(null)}
         className="my-4"
       />
-      <button type="submit" disabled={status === 'sending' || !captchaToken} className="bg-[#2d6a4f] hover:bg-[#1b4332] text-[white] border-0 mt-[32px] py-[10px] px-[14px] rounded-full cursor-pointer disabled:opacity-50 transition">
+      <button type="submit" disabled={status === 'sending' || !captchaToken} className="bg-[#2d6a4f] hover:bg-[#1b4332] text-[#f5f0e8] border-0 mt-[32px] py-[10px] px-[14px] rounded-full cursor-pointer disabled:opacity-50 transition">
         {status === 'sending' ? t.form.sending : t.form.send}
       </button>
       {status === 'sent' && <p className="text-green-600">{t.form.success}</p>}

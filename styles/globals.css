@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -20,7 +21,7 @@
     background: #c8b68e url('/images/planks.png') repeat;
     background-size: 300px auto;
     color: var(--text);
-    font-family: inherit;
+    font-family: 'Montserrat', system-ui, sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -36,6 +37,20 @@
   a:hover {
     color: var(--accent-dark);
   }
+}
+
+/* ── Dark plank background (horizontal) ── */
+.plank-bg {
+  background: url('/images/plank-h.png') center/cover no-repeat;
+}
+
+/* ── Nav signs ── */
+.nav-sign {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.nav-sign:hover {
+  transform: translateY(-6px) rotate(-2deg) !important;
+  filter: brightness(1.1);
 }
 
 /* ── Hanging plants ── */

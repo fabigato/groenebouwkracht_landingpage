@@ -9,21 +9,21 @@ export default function Project() {
     <Layout title={`${t.aboutTitle} — ${t.pageTitle}`} pageTitle={t.aboutTitle}>
       <section>
         <div className="grid md:grid-cols-2 gap-6 mt-4">
-          <div>
-            <h3 className="font-bold text-lg mb-1" style={{ color: '#1b4332' }}>{t.aboutWhat}</h3>
-            <p style={{ color: '#5c4f3a' }}>{t.aboutWhatText}</p>
+          <div className="plank-bg rounded-[12px] p-6">
+            <h3 className="font-bold text-lg mb-1" style={{ color: '#f5f0e8' }}>{t.aboutWhat}</h3>
+            <p style={{ color: '#f5f0e8' }}>{t.aboutWhatText}</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-1" style={{ color: '#1b4332' }}>{t.aboutWho}</h3>
-            <p style={{ color: '#5c4f3a' }}>{t.aboutWhoText}</p>
+          <div className="plank-bg rounded-[12px] p-6">
+            <h3 className="font-bold text-lg mb-1" style={{ color: '#f5f0e8' }}>{t.aboutWho}</h3>
+            <p style={{ color: '#f5f0e8' }}>{t.aboutWhoText}</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-1" style={{ color: '#1b4332' }}>{t.aboutCost}</h3>
-            <p style={{ color: '#5c4f3a' }}>{t.aboutCostText}</p>
+          <div className="plank-bg rounded-[12px] p-6">
+            <h3 className="font-bold text-lg mb-1" style={{ color: '#f5f0e8' }}>{t.aboutCost}</h3>
+            <p style={{ color: '#f5f0e8' }}>{t.aboutCostText}</p>
           </div>
-          <div>
-            <h3 className="font-bold text-lg mb-1" style={{ color: '#1b4332' }}>{t.aboutPlanning}</h3>
-            <p style={{ color: '#5c4f3a' }}>{t.aboutPlanningText}</p>
+          <div className="plank-bg rounded-[12px] p-6">
+            <h3 className="font-bold text-lg mb-1" style={{ color: '#f5f0e8' }}>{t.aboutPlanning}</h3>
+            <p style={{ color: '#f5f0e8' }}>{t.aboutPlanningText}</p>
           </div>
         </div>
       </section>
