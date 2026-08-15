@@ -92,13 +92,13 @@ export default function Layout({ title, description, pageTitle, headerContent, c
             {headerContent}
           </div>
         ) : (
-          <div className="max-w-[900px] md:max-w-[1100px] mx-auto p-6 relative z-20">
+          <div className="max-w-[900px] md:max-w-[1100px] mx-auto px-8 pt-6 pb-2 relative z-20">
             <h1 className="font-bold md:text-[44px] lg:text-[52px]" style={{ color: '#1b4332' }}>{pageTitle}</h1>
           </div>
         )}
       </header>
 
-      <main className={`max-w-[900px] md:max-w-[1100px] mx-auto px-8 pb-8 ${headerContent ? 'pt-24' : 'pt-12'}`}>
+      <main className={`max-w-[900px] md:max-w-[1100px] mx-auto px-8 pb-8 ${headerContent ? 'pt-24' : 'pt-12'} ${children ? 'bg-[#f5f0e8]/60 rounded-[16px] mb-8' : ''}`}>
         {children}
       </main>
 
