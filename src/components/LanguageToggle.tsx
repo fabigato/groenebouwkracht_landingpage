@@ -7,14 +7,14 @@ export default function LanguageToggle() {
     <div className="flex items-center gap-1 text-sm font-medium">
       <button
         onClick={() => setLang('en')}
-        className={`px-2 py-1 rounded ${lang === 'en' ? 'bg-[#2d6a4f] text-white' : 'text-slate-500 hover:text-slate-800'}`}
+        className={`px-2 py-1 rounded ${lang === 'en' ? 'bg-[#2d6a4f] text-[#f5f0e8]' : 'text-slate-500 hover:text-slate-800'}`}
       >
         EN
       </button>
       <span className="text-slate-300">|</span>
       <button
         onClick={() => setLang('nl')}
-        className={`px-2 py-1 rounded ${lang === 'nl' ? 'bg-[#2d6a4f] text-white' : 'text-slate-500 hover:text-slate-800'}`}
+        className={`px-2 py-1 rounded ${lang === 'nl' ? 'bg-[#2d6a4f] text-[#f5f0e8]' : 'text-slate-500 hover:text-slate-800'}`}
       >
         NL
       </button>

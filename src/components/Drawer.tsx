@@ -85,14 +85,20 @@ export default function Drawer() {
               onClick={() => setIsOpen(false)}
               style={{
                 display: 'block',
-                padding: '0.75rem 1rem',
-                borderRadius: '8px',
-                fontWeight: 500,
-                fontSize: '1rem',
+                padding: '0.6rem 1.4rem',
+                borderRadius: '3px',
+                fontWeight: 600,
+                fontSize: '1.5rem',
+                fontFamily: 'var(--font-handwritten)',
                 textDecoration: 'none',
-                background: pathname === href ? '#2d6a4f' : 'transparent',
-                color: pathname === href ? 'white' : '#0f1720',
-                transition: 'background 150ms',
+                color: '#f5f0e8',
+                backgroundImage: 'url(/images/plank-h.png)',
+                backgroundSize: '100% 100%',
+                backgroundRepeat: 'no-repeat',
+                overflow: 'hidden',
+                textShadow: '0 1px 3px rgba(0,0,0,0.6)',
+                opacity: pathname === href ? 1 : 0.8,
+                transition: 'opacity 150ms',
               }}
             >
               {label}
