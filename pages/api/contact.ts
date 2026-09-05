@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL || 'https://hooks.slack.com/services/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'
+const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL || ''
 
 // Rate limiting: max 3 berichten per IP per uur
 const rateLimitMap = new Map<string, number[]>()
