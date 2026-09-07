@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Layout from '../src/components/Layout'
+import ProjectCarousel from '../src/components/ProjectCarousel'
 import { useLanguage } from '../src/context/LanguageContext'
 
 export default function Project() {
@@ -56,26 +57,12 @@ export default function Project() {
         })}
       </section>
 
-      <section id="gallery" className="my-10">
-        <h2>{t.galleryTitle}</h2>
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {t.gallerySlides.map((slide, i) => (
-            <div key={i} className="bg-[#ede6d8] rounded-[12px] overflow-hidden">
-              <Image
-                src={slide.src}
-                alt={slide.alt}
-                width={550}
-                height={400}
-                className="w-full h-auto"
-              />
-              <div className="p-5">
-                {slide.caption.split('\n\n').map((para, j) => (
-                  <p key={j} className="mb-3 last:mb-0" style={{ color: '#5c4f3a' }}>{para}</p>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
+
+      <section id="sustainability" className="my-10">
+        {t.sustainabilityText.split('\n\n').map((para, i) => (
+          <p key={i} className="mb-3" style={{ color: '#5c4f3a' }}>{para}</p>
+        ))}
       </section>
 
       <section id="map" className="my-10">

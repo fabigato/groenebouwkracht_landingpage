@@ -83,15 +83,27 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
         ))}
       </div>
 
-      {/* Dot indicators */}
-      <div className="flex gap-2 mt-3">
-        {slides.map((_, i) => (
+      {/* Thumbnail navigation */}
+      <div className="flex gap-3 mt-4 flex-wrap">
+        {slides.map((slide, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition ${i === current ? 'bg-[#2d6a4f]' : 'bg-[#ccc]'}`}
-          />
+            aria-label={`Go to slide ${i + 1}: ${slide.alt}`}
+            className={`relative w-24 h-16 rounded-[8px] overflow-hidden transition border-4 ${
+              i === current
+                ? 'border-[#2d6a4f]'
+                : 'border-transparent opacity-60 hover:opacity-100'
+            }`}
+          >
+            <Image
+              src={slide.src}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="96px"
+            />
+          </button>
         ))}
       </div>
 
