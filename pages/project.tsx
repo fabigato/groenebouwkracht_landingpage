@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import Layout from '../src/components/Layout'
-import ProjectCarousel from '../src/components/ProjectCarousel'
 import { useLanguage } from '../src/context/LanguageContext'
 
 export default function Project() {
@@ -7,6 +7,16 @@ export default function Project() {
 
   return (
     <Layout title={`${t.aboutTitle} — ${t.pageTitle}`} pageTitle={t.aboutTitle}>
+      <div className="rounded-[12px] overflow-hidden mb-8">
+        <Image
+          src="/images/foto-infobijeenkomst.jpeg"
+          alt="Infobijeenkomst Groene Bouwkracht"
+          width={1100}
+          height={700}
+          className="w-full h-auto"
+        />
+      </div>
+
       <section>
         <div className="grid md:grid-cols-2 gap-6 mt-4">
           <div className="plank-bg rounded-[12px] p-6">
@@ -46,7 +56,27 @@ export default function Project() {
         })}
       </section>
 
-      <ProjectCarousel title={t.galleryTitle} slides={t.gallerySlides} />
+      <section id="gallery" className="my-10">
+        <h2>{t.galleryTitle}</h2>
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          {t.gallerySlides.map((slide, i) => (
+            <div key={i} className="bg-[#ede6d8] rounded-[12px] overflow-hidden">
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                width={550}
+                height={400}
+                className="w-full h-auto"
+              />
+              <div className="p-5">
+                {slide.caption.split('\n\n').map((para, j) => (
+                  <p key={j} className="mb-3 last:mb-0" style={{ color: '#5c4f3a' }}>{para}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section id="map" className="my-10">
         <h2>{t.locationTitle}</h2>
