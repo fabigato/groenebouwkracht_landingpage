@@ -43,7 +43,7 @@ export default function ProjectCarousel({ title, slides }: ProjectCarouselProps)
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 1100px) 100vw, 1100px"
               />
             </div>
