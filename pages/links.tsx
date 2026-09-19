@@ -14,6 +14,9 @@ export default function Links() {
           <li style={{ fontSize: '1.2rem' }}>
             <a href="https://hallocentrumeiland.nl/publicaties" target="_blank" rel="noopener noreferrer">{t.halloPublicationsLink}</a>
           </li>
+          <li style={{ fontSize: '1.2rem' }}>
+            <a href="/documents/groene-bouwkracht-020-info-middag.pptx" download>{t.infoPresentationLink}</a>
+          </li>
         </ul>
       </section>
     </Layout>

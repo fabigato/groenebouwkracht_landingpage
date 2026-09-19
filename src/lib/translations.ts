@@ -38,6 +38,7 @@ export const translations = {
     linksTitle: 'Links',
     plotRulesLink: 'Plot rules',
     halloPublicationsLink: 'hallocentrumeiland - publications',
+    infoPresentationLink: 'Presentation info afternoon (PowerPoint)',
     qaTitle: 'Frequently asked questions',
     qaItems: [
       { q: 'What exactly is CPO?', a: 'CPO stands for Collectief Particulier Opdrachtgeverschap. A group of future residents jointly commissions the design and construction of their own building. There is no commercial developer — the group makes the decisions, supported by professional advisors.' },
@@ -102,6 +103,7 @@ export const translations = {
     linksTitle: 'Links',
     plotRulesLink: 'Kavelregels',
     halloPublicationsLink: 'hallocentrumeiland - publicaties',
+    infoPresentationLink: 'Presentatie infomiddag (PowerPoint)',
     qaTitle: 'Veelgestelde vragen',
     qaItems: [
       { q: 'Wat is CPO precies?', a: 'CPO staat voor Collectief Particulier Opdrachtgeverschap. Een groep toekomstige bewoners stuurt samen het ontwerp en de bouw van hun eigen gebouw aan. Er is geen commerciële ontwikkelaar — de groep neemt de beslissingen, ondersteund door professionele adviseurs.' },
